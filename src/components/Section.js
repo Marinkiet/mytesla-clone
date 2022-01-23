@@ -7,31 +7,35 @@ function Section({title,description,rightBtnText,leftBtnText,backgroundImg}) {
     return (
         <Wrap bgImage={backgroundImg}>
             <Fade bottom>
-            <ItemText>
-                <h1>{title}</h1>
-                <p>{description}</p>
-            </ItemText>
+                <ItemText>
+                    <h1>{title}</h1>
+                    <p>{description}</p>
+                </ItemText>
             </Fade>
             <Buttons>
-            <Fade bottom>    
-            <ButtonGroup>
-                <LeftButton>
-                    {leftBtnText}
-                </LeftButton>
-                {rightBtnText &&
-                <RightButton>
-                    {rightBtnText }
-                </RightButton>
-                }
-            </ButtonGroup>
-            </Fade>
-            <DownArrow src = "/images/down-arrow.svg"></DownArrow>
+                <Fade bottom>    
+                    <ButtonGroup>
+
+                        <LeftButton>
+                            {leftBtnText}
+                        </LeftButton>
+
+                       {rightBtnText &&
+
+                            <RightButton>
+                                {rightBtnText }
+                            </RightButton>
+                        }
+                    </ButtonGroup>
+                </Fade>
+            <DownArrow src="/images/down-arrow.svg"></DownArrow>
             </Buttons>
         </Wrap>
     )
 }
 
 export default Section
+
 const Wrap = styled.div`
 width: 100vw;
 height:100vh;
@@ -39,7 +43,6 @@ background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
 display:flex;
-background-image:url('/images/model-y.jpg');
 flex-direction:column;
 justify-content:space-between; //vertical
 align-items:center ;//horizonal
